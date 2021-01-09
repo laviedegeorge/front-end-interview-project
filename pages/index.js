@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Container from "../components/Container";
+import Footer from "../components/Footer";
+import GroupContainer from "../components/GroupContainer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
@@ -12,14 +15,16 @@ const Index = () => {
       </Head>
       <Header />
       <main className="w-screen flex justify-center">
-        <div className="w-full lg:w-8/12">
+        <Container>
           <Hero
             imgUrl="../assets/hero-img.jpg"
             header="Discover Aisle"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
-        </div>
+          <GroupContainer />
+        </Container>
       </main>
+      <Footer />
     </div>
   );
 };
