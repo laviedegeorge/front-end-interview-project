@@ -1,5 +1,7 @@
 import React from "react";
 import { GlobalStyles } from "../components";
+import "../styles/globals.css";
+import "tailwindcss/tailwind.css";
 
 const App = ({ Component, pageProps }) => {
   return (
