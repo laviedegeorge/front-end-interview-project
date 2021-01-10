@@ -1,7 +1,8 @@
 import React from "react";
 import propTypes from "prop-types";
 
-const Hero = ({ imgUrl, header, text }) => {
+const Hero = ({ data }) => {
+  const { imgUrl, header, text } = data;
   return (
     <section className=" w-full block lg:flex lg:my-8 ">
       <img src={imgUrl} className=" w-full bg-black" />
