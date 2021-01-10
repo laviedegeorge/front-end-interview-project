@@ -1,19 +1,23 @@
 import React from "react";
 import propTypes from "prop-types";
 
-const ItemCard = ({ imgUrl, name, price }) => {
+const ItemCard = ({ itemData }) => {
+  const { title, unitPrice, assets } = itemData;
+  const imgUrl = assets[0].url;
   return (
     <div
       style={{ width: "150px", height: "220px" }}
-      className="hover:shadow-md"
+      className="hover:shadow-md rounded-md my-4"
     >
       <img
         src={imgUrl}
-        className=" bg-gray-400"
+        className=" bg-gray-400 rounded-t-md"
         style={{ width: "150px", height: "150px" }}
       />
-      <p className="text-sm">{name}</p>
-      <p className="text-sm text-gray-400">{`$${price}`}</p>
+      <div className="flex flex-col justify-between p-2">
+        <p className="text-sm">{title}</p>
+        <p className="text-sm text-gray-400">{`$${unitPrice}`}</p>
+      </div>
     </div>
   );
 };

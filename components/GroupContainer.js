@@ -1,15 +1,15 @@
 import React from "react";
 import ItemCard from "./ItemCard";
 
-const GroupContainer = () => {
+const GroupContainer = ({ group }) => {
+  const { name, products } = group;
   return (
     <section className="my-6 px-4 lg:px-0">
-      <h2 className=" font-bold text-2xl py-4">Group name</h2>
+      <h2 className=" font-bold text-2xl py-4">{name}</h2>
       <div className="flex flex-wrap justify-between">
-        <ItemCard imgUrl="#" name="Lorem ipsum dolor sit amet" price={3.5} />
-        <ItemCard imgUrl="#" name="Lorem ipsum dolor sit amet" price={3.5} />
-        <ItemCard imgUrl="#" name="Lorem ipsum dolor sit amet" price={3.5} />
-        <ItemCard imgUrl="#" name="Lorem ipsum dolor sit amet" price={3.5} />
+        {products.map((product) => {
+          return <ItemCard key={product.id} itemData={product} />;
+        })}
       </div>
     </section>
   );
