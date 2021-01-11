@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <header
         style={{ backgroundColor: "#121212" }}
-        className=" flex justify-between items-center text-white px-4 py-2"
+        className=" flex justify-between items-center text-white sticky top-0 left-0 shadow px-4 py-3"
       >
         <nav className="hidden lg:block">
           <ul className=" flex text-sm font-light">
@@ -38,7 +38,7 @@ const Header = () => {
         }}
         className={`${
           state ? "block" : "hidden"
-        } w-screen text-white text-sm font-light absolute left-0 p-4`}
+        } w-screen text-white text-sm font-light fixed left-0 p-4`}
       >
         <ul className="block">
           <li className="py-2">Stores</li>

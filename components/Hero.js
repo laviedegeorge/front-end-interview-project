@@ -15,9 +15,7 @@ const Hero = ({ data }) => {
 };
 
 Hero.propTypes = {
-  imgUrl: propTypes.string.isRequired,
-  header: propTypes.string,
-  text: propTypes.string,
+  data: propTypes.object.isRequired,
 };
 
 export default Hero;
