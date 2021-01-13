@@ -41,7 +41,6 @@ export default Index;
 /* ====TODO ====== */
 
 // LATER...
-// make groups to have 4 items only and a button to take users to a different page if there are more products
 // add more stuffs from the API
 // update SEO
 // create custom hooks and make the API code neater
